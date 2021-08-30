@@ -12,12 +12,13 @@ class ListViewController: UIViewController {
     }
     
     func bind() {
-        viewModel.nameTask.bind(to: taskTableView.rx
-                                    .items(cellIdentifier: "TaskTableViewCell", cellType: TaskTableViewCell.self)) {row, name, cell in
-              
-            cell.nameTaskLablel.text="\(name)"
+        viewModel.taskRx.bind(to: taskTableView.rx
+                                    .items(cellIdentifier: "TaskTableViewCell", cellType: TaskTableViewCell.self)) {row, task, cell in
+            cell.nameTaskLablel.text="\(task.nameTask)"
+            cell.textTaskLabel.text="\(task.textTask)"
+            cell.deadlineTaskLabel.text="\(task.deadlineTask)"
             }
-          
+      
     }
 
 }

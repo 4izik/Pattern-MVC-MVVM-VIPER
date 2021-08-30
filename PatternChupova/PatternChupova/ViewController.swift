@@ -15,7 +15,9 @@ class ViewController: UIViewController {
         textTaskTextfield.textColor=UIColor.lightGray
         textTaskTextfield.text="Описание задачи"
         print(realm.objects(TaskModel.self).count)
-        
+        nameTaskTextField.delegate=self
+        dateCreateTextField.delegate=self
+        deadlineTextField.delegate=self
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -36,8 +38,12 @@ class ViewController: UIViewController {
             realm.add(task)
         }
     }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            self.view.endEditing(true)
+            return false
+        }
 }
-extension ViewController:UITextViewDelegate {
+extension ViewController:UITextViewDelegate, UITextFieldDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
         if (textView.text == "Описание задачи" && textView.textColor == .lightGray)
            {
