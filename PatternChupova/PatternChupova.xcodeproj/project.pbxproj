@@ -14,6 +14,9 @@
 		5D9BC2CA26D8D15700F15E52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D9BC2C926D8D15700F15E52 /* Assets.xcassets */; };
 		5D9BC2CD26D8D15700F15E52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D9BC2CB26D8D15700F15E52 /* LaunchScreen.storyboard */; };
 		5D9BC2D526D8D1EE00F15E52 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9BC2D426D8D1EE00F15E52 /* TaskModel.swift */; };
+		5DCEEF2426DCA9F70065B2CA /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCEEF2326DCA9F70065B2CA /* TaskTableViewCell.swift */; };
+		5DCEEF2626DCAA6A0065B2CA /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCEEF2526DCAA6A0065B2CA /* ListViewController.swift */; };
+		5DCEEF2826DCAAB50065B2CA /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCEEF2726DCAAB50065B2CA /* ListViewModel.swift */; };
 		ECF37E30112F154CF69BED78 /* Pods_PatternChupova.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F51AB4B87224ABD712153C30 /* Pods_PatternChupova.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +30,9 @@
 		5D9BC2CC26D8D15700F15E52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D9BC2CE26D8D15700F15E52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D9BC2D426D8D1EE00F15E52 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
+		5DCEEF2326DCA9F70065B2CA /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		5DCEEF2526DCAA6A0065B2CA /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		5DCEEF2726DCAAB50065B2CA /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		C034EA4F68CF33A15D879BB1 /* Pods-PatternChupova.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PatternChupova.release.xcconfig"; path = "Target Support Files/Pods-PatternChupova/Pods-PatternChupova.release.xcconfig"; sourceTree = "<group>"; };
 		F51AB4B87224ABD712153C30 /* Pods_PatternChupova.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PatternChupova.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F85E2F50EC04CE1F64884674 /* Pods-PatternChupova.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PatternChupova.debug.xcconfig"; path = "Target Support Files/Pods-PatternChupova/Pods-PatternChupova.debug.xcconfig"; sourceTree = "<group>"; };
@@ -76,9 +82,12 @@
 			children = (
 				5D9BC2C026D8D15500F15E52 /* AppDelegate.swift */,
 				5D9BC2C226D8D15500F15E52 /* SceneDelegate.swift */,
+				5D9BC2D426D8D1EE00F15E52 /* TaskModel.swift */,
 				5D9BC2C426D8D15500F15E52 /* ViewController.swift */,
 				5D9BC2C626D8D15500F15E52 /* Main.storyboard */,
-				5D9BC2D426D8D1EE00F15E52 /* TaskModel.swift */,
+				5DCEEF2726DCAAB50065B2CA /* ListViewModel.swift */,
+				5DCEEF2526DCAA6A0065B2CA /* ListViewController.swift */,
+				5DCEEF2326DCA9F70065B2CA /* TaskTableViewCell.swift */,
 				5D9BC2C926D8D15700F15E52 /* Assets.xcassets */,
 				5D9BC2CB26D8D15700F15E52 /* LaunchScreen.storyboard */,
 				5D9BC2CE26D8D15700F15E52 /* Info.plist */,
@@ -210,6 +219,9 @@
 			files = (
 				5D9BC2C526D8D15500F15E52 /* ViewController.swift in Sources */,
 				5D9BC2C126D8D15500F15E52 /* AppDelegate.swift in Sources */,
+				5DCEEF2826DCAAB50065B2CA /* ListViewModel.swift in Sources */,
+				5DCEEF2626DCAA6A0065B2CA /* ListViewController.swift in Sources */,
+				5DCEEF2426DCA9F70065B2CA /* TaskTableViewCell.swift in Sources */,
 				5D9BC2D526D8D1EE00F15E52 /* TaskModel.swift in Sources */,
 				5D9BC2C326D8D15500F15E52 /* SceneDelegate.swift in Sources */,
 			);

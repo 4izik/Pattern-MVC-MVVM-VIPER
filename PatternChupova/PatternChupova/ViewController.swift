@@ -8,7 +8,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var dateCreateTextField: UITextField!
     @IBOutlet weak var deadlineTextField: UITextField!
     @IBOutlet weak var addTaskButton: UIButton!
-    private let realm = try! Realm()
+    let realm = try! Realm()
     override func viewDidLoad() {
         super.viewDidLoad()
         textTaskTextfield.delegate=self
