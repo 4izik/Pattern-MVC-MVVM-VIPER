@@ -4,10 +4,12 @@ import RxCocoa
 
 class ListViewController: UIViewController {
     @IBOutlet weak var taskTableView: UITableView!
+    @IBOutlet weak var optionView: UIView!
     let viewModel = ListViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        taskTableView.delegate=self
         bind()
     }
     
@@ -20,5 +22,10 @@ class ListViewController: UIViewController {
             }
       
     }
+}
 
+extension ListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.showPopUp(vc: self)
+    }
 }

@@ -117,6 +117,71 @@
             </objects>
             <point key="canvasLocation" x="499" y="-50"/>
         </scene>
+        <!--Pop Up View Controller-->
+        <scene sceneID="63j-CD-gu7">
+            <objects>
+                <viewController storyboardIdentifier="popUp" id="qgJ-BN-z2x" customClass="PopUpViewController" customModule="PatternChupova" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3bl-dg-5aY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="POB-Vb-yhN">
+                                <rect key="frame" x="107" y="348" width="200" height="200"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cYS-Sq-TXj">
+                                        <rect key="frame" x="10" y="0.0" width="180" height="200"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hyp-Df-L6w">
+                                                <rect key="frame" x="0.0" y="0.0" width="180" height="66.5"/>
+                                                <state key="normal" title="Завершить"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2W-2q-5dZ">
+                                                <rect key="frame" x="0.0" y="66.5" width="180" height="67"/>
+                                                <state key="normal" title="Удалить"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUT-xl-Vgj">
+                                                <rect key="frame" x="0.0" y="133.5" width="180" height="66.5"/>
+                                                <state key="normal" title="Восстановить"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Aj-hl-3sU">
+                                        <rect key="frame" x="170" y="0.0" width="30" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <connections>
+                                            <action selector="closePopUp:" destination="qgJ-BN-z2x" eventType="touchUpInside" id="rYl-aW-G2F"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="cYS-Sq-TXj" secondAttribute="trailing" constant="10" id="20z-l2-afZ"/>
+                                    <constraint firstAttribute="height" constant="200" id="5Io-DO-kPi"/>
+                                    <constraint firstItem="9Aj-hl-3sU" firstAttribute="top" secondItem="POB-Vb-yhN" secondAttribute="top" id="F2j-3R-EuY"/>
+                                    <constraint firstItem="cYS-Sq-TXj" firstAttribute="leading" secondItem="POB-Vb-yhN" secondAttribute="leading" constant="10" id="G0T-Qe-072"/>
+                                    <constraint firstItem="cYS-Sq-TXj" firstAttribute="top" secondItem="POB-Vb-yhN" secondAttribute="top" id="aaN-HU-ffB"/>
+                                    <constraint firstAttribute="bottom" secondItem="cYS-Sq-TXj" secondAttribute="bottom" id="bsl-EH-sFK"/>
+                                    <constraint firstAttribute="trailing" secondItem="9Aj-hl-3sU" secondAttribute="trailing" id="sYb-fp-q63"/>
+                                    <constraint firstAttribute="width" constant="200" id="uyQ-rM-heL"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MWv-cY-zuh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="POB-Vb-yhN" firstAttribute="centerX" secondItem="3bl-dg-5aY" secondAttribute="centerX" id="F1W-YH-iWT"/>
+                            <constraint firstItem="POB-Vb-yhN" firstAttribute="centerY" secondItem="3bl-dg-5aY" secondAttribute="centerY" id="cFt-zO-HcI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="closePopUp" destination="9Aj-hl-3sU" id="7O3-uB-qmS"/>
+                        <outlet property="popUpView" destination="POB-Vb-yhN" id="pO0-3O-dVz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SGM-od-HRP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1210" y="675"/>
+        </scene>
         <!--list-->
         <scene sceneID="0zq-Oq-Kqr">
             <objects>
@@ -228,6 +293,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
