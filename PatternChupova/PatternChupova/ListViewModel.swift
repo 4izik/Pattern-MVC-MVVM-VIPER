@@ -4,21 +4,22 @@ import RxSwift
 import RealmSwift
 
 class ListViewModel {
-    let taskRx=BehaviorSubject<[TaskModel]> (value: [])
+    //let taskRx=BehaviorSubject<[TaskModel]> (value: [])
+    var tasks=[TaskModel]()
     let realm = try! Realm()
     init () {
         takeRealm()
-        bind()
     }
-    private func takeRealm() {
+   private func takeRealm() {
         let allTask=realm.objects(TaskModel.self)
         
         for task in allTask {
-            try! taskRx.onNext([task] + taskRx.value())
+            try! tasks.append(task)
+            //taskRx.onNext([task] + taskRx.value())
         }
     }
-    private func bind() {
-       
+    func bindTask() -> Int {
+        return realm.objects(TaskModel.self).count
     }
     func showPopUp(vc:UIViewController) {
             let popUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "popUp") as! PopUpViewController

@@ -8,6 +8,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var deadlineTextField: UITextField!
     @IBOutlet weak var addTaskButton: UIButton!
     let realm = try! Realm()
+    //let listVC=ListViewController()
     override func viewDidLoad() {
         super.viewDidLoad()
         textTaskTextfield.delegate=self
@@ -30,6 +31,7 @@ class ViewController: UIViewController {
         if let dateCreate=dateCreateTextField.text {task.dateCreate=dateCreate}
         if let deadline=deadlineTextField.text {task.deadlineTask=deadline}
         saveInRealm(task: task)
+       // listVC.taskTableView.reloadData()
     }
     func saveInRealm (task: TaskModel) {
         try! realm.write{
@@ -40,11 +42,7 @@ class ViewController: UIViewController {
             self.view.endEditing(true)
             return false
         }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let listVC = segue.destination as? ListViewController {
-            listVC.taskTableView.reloadData()
-        }
-    }
+  
 }
 extension ViewController:UITextViewDelegate, UITextFieldDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
