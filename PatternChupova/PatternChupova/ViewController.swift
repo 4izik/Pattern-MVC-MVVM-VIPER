@@ -30,6 +30,7 @@ class ViewController: UIViewController {
         if let text=textTaskTextfield.text {task.textTask=text}
         if let dateCreate=dateCreateTextField.text {task.dateCreate=dateCreate}
         if let deadline=deadlineTextField.text {task.deadlineTask=deadline}
+        task.status="active"
         saveInRealm(task: task)
        // listVC.taskTableView.reloadData()
     }

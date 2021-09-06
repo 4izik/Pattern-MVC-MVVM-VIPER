@@ -11,28 +11,31 @@ class ListViewController: UIViewController {
         super.viewDidLoad()
         taskTableView.delegate=self
         taskTableView.dataSource=self
-        bind()
+       
     }
     
-    func bind() {
-   
-    }
+    
     override func viewWillAppear(_ animated: Bool) {
         taskTableView.reloadData()
+        taskTableView.tableFooterView=UIView()
+        viewModel.bindTask()
     }
   
 }
 
 extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.bindTask()
+        return viewModel.bindTaskNumber()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell=tableView.dequeueReusableCell(withIdentifier: "TaskTableViewCell", for: indexPath) as! TaskTableViewCell
+        if viewModel.tasks[indexPath.row].status == "active" {
         cell.nameTaskLablel.text=viewModel.tasks[indexPath.row].nameTask
         cell.textTaskLabel.text=viewModel.tasks[indexPath.row].textTask
-        cell.deadlineTaskLabel.text=viewModel.tasks[indexPath.row].deadlineTask
+            cell.deadlineTaskLabel.text=viewModel.tasks[indexPath.row].deadlineTask
+            cell.statusLabel.text=viewModel.tasks[indexPath.row].status
+        }
         return cell
     }
     

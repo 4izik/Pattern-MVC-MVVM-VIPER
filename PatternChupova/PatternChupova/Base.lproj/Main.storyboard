@@ -239,13 +239,21 @@
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="71r-7T-QO5">
+                                                    <rect key="frame" x="186" y="34.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="rJQ-Vj-WAo" firstAttribute="top" secondItem="fTh-jv-FWG" secondAttribute="bottom" constant="5" id="2yw-Fm-VbQ"/>
+                                                <constraint firstItem="71r-7T-QO5" firstAttribute="centerY" secondItem="p05-Cv-kCQ" secondAttribute="centerY" id="7Pt-CN-NT9"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="YOj-mC-fvT" secondAttribute="trailing" constant="20" id="Fpf-c1-Dam"/>
                                                 <constraint firstItem="rJQ-Vj-WAo" firstAttribute="leading" secondItem="p05-Cv-kCQ" secondAttribute="leadingMargin" constant="20" id="Lzm-Ah-LlJ"/>
                                                 <constraint firstItem="rJQ-Vj-WAo" firstAttribute="leading" secondItem="p05-Cv-kCQ" secondAttribute="leadingMargin" constant="20" id="W5r-BP-PPQ"/>
                                                 <constraint firstItem="YOj-mC-fvT" firstAttribute="top" secondItem="p05-Cv-kCQ" secondAttribute="topMargin" constant="20" id="ddm-ab-aUP"/>
+                                                <constraint firstItem="71r-7T-QO5" firstAttribute="centerX" secondItem="p05-Cv-kCQ" secondAttribute="centerX" id="eCy-WB-anm"/>
                                                 <constraint firstItem="fTh-jv-FWG" firstAttribute="top" secondItem="p05-Cv-kCQ" secondAttribute="topMargin" constant="5" id="lo2-If-z6N"/>
                                                 <constraint firstItem="fTh-jv-FWG" firstAttribute="leading" secondItem="p05-Cv-kCQ" secondAttribute="leadingMargin" constant="20" id="n83-4r-7EL"/>
                                             </constraints>
@@ -253,6 +261,7 @@
                                         <connections>
                                             <outlet property="deadlineTaskLabel" destination="YOj-mC-fvT" id="Ozw-Kl-1OL"/>
                                             <outlet property="nameTaskLablel" destination="fTh-jv-FWG" id="6xm-T2-9kU"/>
+                                            <outlet property="statusLabel" destination="71r-7T-QO5" id="VLR-sd-gtM"/>
                                             <outlet property="textTaskLabel" destination="rJQ-Vj-WAo" id="5Hv-wK-JhT"/>
                                         </connections>
                                     </tableViewCell>

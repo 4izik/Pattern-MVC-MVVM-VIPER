@@ -19,6 +19,7 @@ class PopUpViewController: UIViewController{
     @IBAction func closePopUp(_ sender: Any) {
         self.view.removeFromSuperview()
         delegate?.setAction(action: doWithTask)
+
     }
     @IBAction func endTask(_ sender: Any) {
         doWithTask="end"
