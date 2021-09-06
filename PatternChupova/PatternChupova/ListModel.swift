@@ -4,6 +4,7 @@ import RealmSwift
 
 class ListModel {
     var tasks=[TaskModel]()
+    var tasksActive=[TaskModel]()
     let realm = try! Realm()
     init () {
         takeRealm()
@@ -19,13 +20,14 @@ class ListModel {
         takeRealm()
         return realm.objects(TaskModel.self).count
     }
-   
-    func getOneTask(index:Int)->TaskModel {
+  
+    func getOneTaskActive(index:Int)->TaskModel {
         return tasks[index]
     }
-    func bindAction(doWithTask:String) {
+    func bindAction(doWithTask:String, index:Int) {
         switch doWithTask {
         case "end":
+            reWriteRealm(index: index, newStatus: "end")
             print("end")
         case "delete":
             print("end")
@@ -35,5 +37,11 @@ class ListModel {
             break
         }
     }
-   
+    func reWriteRealm(index:Int, newStatus: String) {
+        print("reWrite")
+        let allTask=realm.objects(TaskModel.self)
+        try! realm.write{
+            allTask[index].status=newStatus
+        }
+    }
 }

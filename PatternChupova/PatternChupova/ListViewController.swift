@@ -43,6 +43,7 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
             cell.deadlineTaskLabel.text=oneTask.deadlineTask
             cell.statusLabel.text=oneTask.status
         }
+      
         return cell
     }
     
@@ -54,5 +55,6 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
 extension ListViewController: PopUpViewControllerDelegate {
     func setAction(action: String) {
         viewModel.doWithTask=action
+      
     }
 }

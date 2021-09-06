@@ -6,7 +6,7 @@ import RealmSwift
 class ListViewModel {
     let listModel=ListModel()
     var doWithTask="" {
-        didSet {listModel.bindAction(doWithTask: doWithTask)}
+        didSet {listModel.bindAction(doWithTask: doWithTask, index: selectRow)}
     }
     var selectRow=0
     init () {
@@ -14,7 +14,7 @@ class ListViewModel {
     }
 
     func bindOneTask(index:Int)->TaskModel {
-        return listModel.getOneTask(index: index)
+        return listModel.getOneTaskActive(index: index)
     }
     func bindTaskNumber() -> Int {
         return listModel.getTaskNumber()
