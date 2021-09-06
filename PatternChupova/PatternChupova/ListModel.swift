@@ -19,7 +19,21 @@ class ListModel {
         takeRealm()
         return realm.objects(TaskModel.self).count
     }
-    func getTask() -> [TaskModel] {
-        return tasks
+   
+    func getOneTask(index:Int)->TaskModel {
+        return tasks[index]
     }
+    func bindAction(doWithTask:String) {
+        switch doWithTask {
+        case "end":
+            print("end")
+        case "delete":
+            print("end")
+        case "restore":
+            print("end")
+        default:
+            break
+        }
+    }
+   
 }

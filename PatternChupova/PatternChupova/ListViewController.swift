@@ -18,9 +18,15 @@ class ListViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         taskTableView.reloadData()
         taskTableView.tableFooterView=UIView()
-        viewModel.bindTask()
     }
-  
+    func showPopUp() {
+            let popUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "popUp") as! PopUpViewController
+            addChild(popUpVC)
+            popUpVC.view.frame = view.frame
+            popUpVC.delegate=self
+            view.addSubview(popUpVC.view)
+            popUpVC.didMove(toParent: self)
+        }
 }
 
 extension ListViewController: UITableViewDelegate, UITableViewDataSource {
@@ -30,17 +36,23 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell=tableView.dequeueReusableCell(withIdentifier: "TaskTableViewCell", for: indexPath) as! TaskTableViewCell
-        if viewModel.tasks[indexPath.row].status == "active" {
-        cell.nameTaskLablel.text=viewModel.tasks[indexPath.row].nameTask
-        cell.textTaskLabel.text=viewModel.tasks[indexPath.row].textTask
-            cell.deadlineTaskLabel.text=viewModel.tasks[indexPath.row].deadlineTask
-            cell.statusLabel.text=viewModel.tasks[indexPath.row].status
+        let oneTask=viewModel.bindOneTask(index: indexPath.row)
+        if oneTask.status == "active" {
+        cell.nameTaskLablel.text=oneTask.nameTask
+        cell.textTaskLabel.text=oneTask.textTask
+            cell.deadlineTaskLabel.text=oneTask.deadlineTask
+            cell.statusLabel.text=oneTask.status
         }
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewModel.showPopUp(vc: self)
+       showPopUp()
         viewModel.selectRow=indexPath.row
+    }
+}
+extension ListViewController: PopUpViewControllerDelegate {
+    func setAction(action: String) {
+        viewModel.doWithTask=action
     }
 }
