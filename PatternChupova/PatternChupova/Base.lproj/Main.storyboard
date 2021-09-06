@@ -134,14 +134,23 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hyp-Df-L6w">
                                                 <rect key="frame" x="0.0" y="0.0" width="180" height="66.5"/>
                                                 <state key="normal" title="Завершить"/>
+                                                <connections>
+                                                    <action selector="endTask:" destination="qgJ-BN-z2x" eventType="touchUpInside" id="RGY-A5-4aI"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2W-2q-5dZ">
                                                 <rect key="frame" x="0.0" y="66.5" width="180" height="67"/>
                                                 <state key="normal" title="Удалить"/>
+                                                <connections>
+                                                    <action selector="deleteTask:" destination="qgJ-BN-z2x" eventType="touchUpInside" id="Vs3-Ds-KoT"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUT-xl-Vgj">
                                                 <rect key="frame" x="0.0" y="133.5" width="180" height="66.5"/>
                                                 <state key="normal" title="Восстановить"/>
+                                                <connections>
+                                                    <action selector="restoreTask:" destination="qgJ-BN-z2x" eventType="touchUpInside" id="JxD-TM-eOP"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>

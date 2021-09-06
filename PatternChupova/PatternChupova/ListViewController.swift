@@ -15,13 +15,10 @@ class ListViewController: UIViewController {
     }
     
     func bind() {
-    /*    viewModel.taskRx.bind(to: taskTableView.rx
-                                    .items(cellIdentifier: "TaskTableViewCell", cellType: TaskTableViewCell.self)) {row, task, cell in
-            cell.nameTaskLablel.text="\(task.nameTask)"
-            cell.textTaskLabel.text="\(task.textTask)"
-            cell.deadlineTaskLabel.text="\(task.deadlineTask)"
-            }
-      */
+   
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        taskTableView.reloadData()
     }
   
 }
@@ -41,5 +38,6 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel.showPopUp(vc: self)
+        viewModel.selectRow=indexPath.row
     }
 }
