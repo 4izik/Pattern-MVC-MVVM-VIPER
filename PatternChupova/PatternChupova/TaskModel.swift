@@ -7,4 +7,5 @@ class TaskModel:Object {
     @objc dynamic var dateCreate=""
     @objc dynamic var deadlineTask=""
     @objc dynamic var status=""
+    @objc dynamic var id=""
 }

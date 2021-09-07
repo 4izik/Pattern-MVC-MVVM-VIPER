@@ -15,33 +15,39 @@ class ListModel {
         for task in allTask {
             try! tasks.append(task)
         }
+        tasksActive=tasks.filter{$0.status=="active"}
     }
     func getTaskNumber() -> Int {
         takeRealm()
-        return realm.objects(TaskModel.self).count
+        tasksActive=tasks.filter{$0.status=="active"}
+        return realm.objects(TaskModel.self).filter{$0.status=="active"}.count
     }
   
     func getOneTaskActive(index:Int)->TaskModel {
-        return tasks[index]
+        return tasksActive[index]
     }
-    func bindAction(doWithTask:String, index:Int) {
+    func bindAction(doWithTask:String, index:String) {
+        
         switch doWithTask {
         case "end":
-            reWriteRealm(index: index, newStatus: "end")
-            print("end")
+            reWriteRealm(id: index, newStatus: "end")
         case "delete":
-            print("end")
+            reWriteRealm(id: index, newStatus: "delete")
         case "restore":
-            print("end")
+            reWriteRealm(id: index, newStatus: "active")
         default:
             break
         }
     }
-    func reWriteRealm(index:Int, newStatus: String) {
-        print("reWrite")
+    func reWriteRealm(id:String, newStatus: String) {
         let allTask=realm.objects(TaskModel.self)
-        try! realm.write{
-            allTask[index].status=newStatus
+        for task in allTask {
+            if task.id==id {
+                try! realm.write{
+                    task.status=newStatus
+                }
+            }
         }
+        
     }
 }

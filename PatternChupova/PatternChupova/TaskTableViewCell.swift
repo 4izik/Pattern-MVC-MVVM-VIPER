@@ -8,6 +8,7 @@ class TaskTableViewCell: UITableViewCell {
     @IBOutlet weak var textTaskLabel: UILabel!
     @IBOutlet weak var deadlineTaskLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
+    var idTask=""
     override func awakeFromNib() {
         super.awakeFromNib()
        

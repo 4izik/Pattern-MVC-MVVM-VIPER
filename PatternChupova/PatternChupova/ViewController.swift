@@ -8,20 +8,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var deadlineTextField: UITextField!
     @IBOutlet weak var addTaskButton: UIButton!
     let realm = try! Realm()
-    //let listVC=ListViewController()
     override func viewDidLoad() {
         super.viewDidLoad()
         textTaskTextfield.delegate=self
         textTaskTextfield.textColor=UIColor.lightGray
         textTaskTextfield.text="Описание задачи"
-        print(realm.objects(TaskModel.self).count)
         nameTaskTextField.delegate=self
         dateCreateTextField.delegate=self
         deadlineTextField.delegate=self
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        
     }
 
     @IBAction func addTask(_ sender: Any) {
@@ -30,9 +27,10 @@ class ViewController: UIViewController {
         if let text=textTaskTextfield.text {task.textTask=text}
         if let dateCreate=dateCreateTextField.text {task.dateCreate=dateCreate}
         if let deadline=deadlineTextField.text {task.deadlineTask=deadline}
+        let uuid = UUID().uuidString
+        task.id=uuid
         task.status="active"
         saveInRealm(task: task)
-       // listVC.taskTableView.reloadData()
     }
     func saveInRealm (task: TaskModel) {
         try! realm.write{

@@ -42,6 +42,7 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
         cell.textTaskLabel.text=oneTask.textTask
             cell.deadlineTaskLabel.text=oneTask.deadlineTask
             cell.statusLabel.text=oneTask.status
+            cell.idTask=oneTask.id
         }
       
         return cell
@@ -49,7 +50,9 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        showPopUp()
-        viewModel.selectRow=indexPath.row
+        var cell = tableView.cellForRow(at: indexPath) as! TaskTableViewCell
+        viewModel.idTask=cell.idTask
+       
     }
 }
 extension ListViewController: PopUpViewControllerDelegate {
