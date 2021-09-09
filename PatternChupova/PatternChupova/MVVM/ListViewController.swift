@@ -58,6 +58,6 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
 extension ListViewController: PopUpViewControllerDelegate {
     func setAction(action: String) {
         viewModel.doWithTask=action
-      
+        taskTableView.reloadData()
     }
 }

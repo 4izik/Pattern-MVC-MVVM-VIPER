@@ -19,6 +19,11 @@
 		5DCEEF2826DCAAB50065B2CA /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCEEF2726DCAAB50065B2CA /* ListViewModel.swift */; };
 		5DCEEF2A26DF670F0065B2CA /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCEEF2926DF670F0065B2CA /* PopUpViewController.swift */; };
 		5DD67C1026E63A0E0076F459 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD67C0F26E63A0E0076F459 /* ListModel.swift */; };
+		5DD67C4626EA3CD80076F459 /* DeleteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD67C4526EA3CD80076F459 /* DeleteListViewController.swift */; };
+		5DD67C4B26EA3D780076F459 /* DeleteListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD67C4A26EA3D780076F459 /* DeleteListPresenter.swift */; };
+		5DD67C4D26EA3E020076F459 /* DeleteListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD67C4C26EA3E020076F459 /* DeleteListInteractor.swift */; };
+		5DD67C5126EA3E750076F459 /* DeleteListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD67C5026EA3E750076F459 /* DeleteListRouter.swift */; };
+		5DD67C5326EA452A0076F459 /* DeleteListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD67C5226EA452A0076F459 /* DeleteListTableViewCell.swift */; };
 		ECF37E30112F154CF69BED78 /* Pods_PatternChupova.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F51AB4B87224ABD712153C30 /* Pods_PatternChupova.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +42,11 @@
 		5DCEEF2726DCAAB50065B2CA /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		5DCEEF2926DF670F0065B2CA /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		5DD67C0F26E63A0E0076F459 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
+		5DD67C4526EA3CD80076F459 /* DeleteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteListViewController.swift; sourceTree = "<group>"; };
+		5DD67C4A26EA3D780076F459 /* DeleteListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteListPresenter.swift; sourceTree = "<group>"; };
+		5DD67C4C26EA3E020076F459 /* DeleteListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteListInteractor.swift; sourceTree = "<group>"; };
+		5DD67C5026EA3E750076F459 /* DeleteListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteListRouter.swift; sourceTree = "<group>"; };
+		5DD67C5226EA452A0076F459 /* DeleteListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteListTableViewCell.swift; sourceTree = "<group>"; };
 		C034EA4F68CF33A15D879BB1 /* Pods-PatternChupova.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PatternChupova.release.xcconfig"; path = "Target Support Files/Pods-PatternChupova/Pods-PatternChupova.release.xcconfig"; sourceTree = "<group>"; };
 		F51AB4B87224ABD712153C30 /* Pods_PatternChupova.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PatternChupova.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F85E2F50EC04CE1F64884674 /* Pods-PatternChupova.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PatternChupova.debug.xcconfig"; path = "Target Support Files/Pods-PatternChupova/Pods-PatternChupova.debug.xcconfig"; sourceTree = "<group>"; };
@@ -66,7 +76,6 @@
 		5D9BC2B426D8D15500F15E52 = {
 			isa = PBXGroup;
 			children = (
-				5DCEEF2926DF670F0065B2CA /* PopUpViewController.swift */,
 				5D9BC2BF26D8D15500F15E52 /* PatternChupova */,
 				5D9BC2BE26D8D15500F15E52 /* Products */,
 				24A6959F967718B106335B06 /* Pods */,
@@ -85,20 +94,50 @@
 		5D9BC2BF26D8D15500F15E52 /* PatternChupova */ = {
 			isa = PBXGroup;
 			children = (
+				5DD67C4926EA3D380076F459 /* VIPER */,
+				5DD67C4726EA3CF00076F459 /* MVVM */,
+				5DD67C4826EA3D110076F459 /* MVC */,
 				5D9BC2C026D8D15500F15E52 /* AppDelegate.swift */,
 				5D9BC2C226D8D15500F15E52 /* SceneDelegate.swift */,
-				5D9BC2D426D8D1EE00F15E52 /* TaskModel.swift */,
-				5D9BC2C426D8D15500F15E52 /* ViewController.swift */,
 				5D9BC2C626D8D15500F15E52 /* Main.storyboard */,
-				5DCEEF2726DCAAB50065B2CA /* ListViewModel.swift */,
-				5DD67C0F26E63A0E0076F459 /* ListModel.swift */,
-				5DCEEF2526DCAA6A0065B2CA /* ListViewController.swift */,
-				5DCEEF2326DCA9F70065B2CA /* TaskTableViewCell.swift */,
 				5D9BC2C926D8D15700F15E52 /* Assets.xcassets */,
 				5D9BC2CB26D8D15700F15E52 /* LaunchScreen.storyboard */,
 				5D9BC2CE26D8D15700F15E52 /* Info.plist */,
 			);
 			path = PatternChupova;
+			sourceTree = "<group>";
+		};
+		5DD67C4726EA3CF00076F459 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				5DCEEF2926DF670F0065B2CA /* PopUpViewController.swift */,
+				5DCEEF2726DCAAB50065B2CA /* ListViewModel.swift */,
+				5DD67C0F26E63A0E0076F459 /* ListModel.swift */,
+				5DCEEF2526DCAA6A0065B2CA /* ListViewController.swift */,
+				5DCEEF2326DCA9F70065B2CA /* TaskTableViewCell.swift */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		5DD67C4826EA3D110076F459 /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				5D9BC2D426D8D1EE00F15E52 /* TaskModel.swift */,
+				5D9BC2C426D8D15500F15E52 /* ViewController.swift */,
+			);
+			path = MVC;
+			sourceTree = "<group>";
+		};
+		5DD67C4926EA3D380076F459 /* VIPER */ = {
+			isa = PBXGroup;
+			children = (
+				5DD67C4526EA3CD80076F459 /* DeleteListViewController.swift */,
+				5DD67C5226EA452A0076F459 /* DeleteListTableViewCell.swift */,
+				5DD67C4A26EA3D780076F459 /* DeleteListPresenter.swift */,
+				5DD67C4C26EA3E020076F459 /* DeleteListInteractor.swift */,
+				5DD67C5026EA3E750076F459 /* DeleteListRouter.swift */,
+			);
+			path = VIPER;
 			sourceTree = "<group>";
 		};
 		778E7A835ADE3A6DF9FEAA3D /* Frameworks */ = {
@@ -225,11 +264,16 @@
 			files = (
 				5DD67C1026E63A0E0076F459 /* ListModel.swift in Sources */,
 				5D9BC2C526D8D15500F15E52 /* ViewController.swift in Sources */,
+				5DD67C5126EA3E750076F459 /* DeleteListRouter.swift in Sources */,
 				5D9BC2C126D8D15500F15E52 /* AppDelegate.swift in Sources */,
+				5DD67C5326EA452A0076F459 /* DeleteListTableViewCell.swift in Sources */,
+				5DD67C4D26EA3E020076F459 /* DeleteListInteractor.swift in Sources */,
 				5DCEEF2826DCAAB50065B2CA /* ListViewModel.swift in Sources */,
 				5DCEEF2626DCAA6A0065B2CA /* ListViewController.swift in Sources */,
 				5DCEEF2426DCA9F70065B2CA /* TaskTableViewCell.swift in Sources */,
 				5D9BC2D526D8D1EE00F15E52 /* TaskModel.swift in Sources */,
+				5DD67C4626EA3CD80076F459 /* DeleteListViewController.swift in Sources */,
+				5DD67C4B26EA3D780076F459 /* DeleteListPresenter.swift in Sources */,
 				5D9BC2C326D8D15500F15E52 /* SceneDelegate.swift in Sources */,
 				5DCEEF2A26DF670F0065B2CA /* PopUpViewController.swift in Sources */,
 			);

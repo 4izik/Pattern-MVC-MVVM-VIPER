@@ -23,13 +23,18 @@ class PopUpViewController: UIViewController{
     }
     @IBAction func endTask(_ sender: Any) {
         doWithTask="end"
-      
+        self.view.removeFromSuperview()
+        delegate?.setAction(action: doWithTask)
     }
     
     @IBAction func deleteTask(_ sender: Any) {
         doWithTask="delete"
+        self.view.removeFromSuperview()
+        delegate?.setAction(action: doWithTask)
     }
     @IBAction func restoreTask(_ sender: Any) {
         doWithTask="restore"
+        self.view.removeFromSuperview()
+        delegate?.setAction(action: doWithTask)
     }
 }
