@@ -12,13 +12,17 @@ class PopUp2ViewController: UIViewController {
     }
     
     @IBAction func closePopUp2(_ sender: Any) {
+        self.view.removeFromSuperview()
     }
     @IBAction func endPopUp2(_ sender: Any) {
+        self.view.removeFromSuperview()
     }
     
     @IBAction func deleteTaskPopUp2(_ sender: Any) {
+        self.view.removeFromSuperview()
     }
     @IBAction func restoreTaskPopUp2(_ sender: Any) {
+        self.view.removeFromSuperview()
     }
     
 }
