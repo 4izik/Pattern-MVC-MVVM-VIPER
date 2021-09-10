@@ -6,6 +6,7 @@ import Realm
 protocol DeleteListInteractorInput{
     var outputInteractor: DeleteListInteractorOutput! {get set}
     func takeDeleteTask() -> [TaskModel]
+    func reWrite(id:String, newStatus: String)
 }
 
 protocol DeleteListInteractorOutput {
@@ -14,8 +15,8 @@ protocol DeleteListInteractorOutput {
 
 class DeleteListInteractor:DeleteListInteractorInput {
     var outputInteractor: DeleteListInteractorOutput!
+    let realm = try! Realm()
     func takeDeleteTask() -> [TaskModel] {
-        let realm = try! Realm()
         var taskDelete:[TaskModel]=[]
         let allTask=realm.objects(TaskModel.self)
         for task in allTask {
@@ -23,6 +24,17 @@ class DeleteListInteractor:DeleteListInteractorInput {
                 try! taskDelete.append(task) }
         }
         return taskDelete
+    }
+    func reWrite(id:String, newStatus: String) {
+            let allTask=realm.objects(TaskModel.self)
+            for task in allTask {
+                if task.id==id {
+                    try! realm.write{
+                        task.status=newStatus
+                    }
+                }
+            }
+        
     }
   
 }

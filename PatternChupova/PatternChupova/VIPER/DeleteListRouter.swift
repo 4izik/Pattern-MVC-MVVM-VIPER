@@ -7,6 +7,7 @@ protocol DeleteListRouterInput{
 }
 
 protocol DeleteListRouterOutput {
+    func actionRouter(action:String)
     
 }
 
@@ -19,15 +20,15 @@ class DeleteListRouter:DeleteListRouterInput {
         while let presentedViewController = topController?.presentedViewController {
                 topController = presentedViewController
             }
-        
         topController?.present(popUp2VC, animated: true, completion: nil)
-        //topController.addChild(popUp2VC)
-        popUp2VC.view.frame = (topController?.view.frame)!
-        topController?.view.addSubview(popUp2VC.view)
+        popUp2VC.modalPresentationStyle = .overCurrentContext
+        popUp2VC.delegate=self
         }
-        
-       // let popUp2VC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "popUp2") as! PopUp2ViewController
-        
     
 }
 
+extension DeleteListRouter: PopUp2ViewControllerDelegate {
+    func setAction(action: String) {
+        outputRouter.actionRouter(action: action)
+    }
+}

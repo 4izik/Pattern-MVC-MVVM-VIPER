@@ -39,5 +39,9 @@ extension DeleteListViewController: UITableViewDelegate, UITableViewDataSource {
     
 }
 extension DeleteListViewController: DeleteListPresenterOutput {
+    func reloadTable() {
+        deleteListTableView.reloadData()
+    }
+    
     
 }
