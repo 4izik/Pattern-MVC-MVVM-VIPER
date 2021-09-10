@@ -7,6 +7,7 @@ class DeleteListTableViewCell: UITableViewCell {
     @IBOutlet weak var textTaskLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var deadLineLabel: UILabel!
+    var id=""
     override func awakeFromNib() {
         super.awakeFromNib()
        

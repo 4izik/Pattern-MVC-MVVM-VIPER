@@ -8,9 +8,13 @@ class DeleteListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.outputPresenter=self
-       
+        
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        presenter.takeInteractor()
+        deleteListTableView.reloadData()
+        deleteListTableView.tableFooterView=UIView()
+    }
 
 }
 extension DeleteListViewController: UITableViewDelegate, UITableViewDataSource {
@@ -25,9 +29,13 @@ extension DeleteListViewController: UITableViewDelegate, UITableViewDataSource {
         cell.textTaskLabel.text=task.textTask
         cell.deadLineLabel.text=task.deadlineTask
         cell.statusLabel.text=task.status
+        cell.id=task.id
         return cell
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! DeleteListTableViewCell
+        presenter.id=cell.id
+    }
     
 }
 extension DeleteListViewController: DeleteListPresenterOutput {
