@@ -24,6 +24,7 @@
 		5DD67C4D26EA3E020076F459 /* DeleteListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD67C4C26EA3E020076F459 /* DeleteListInteractor.swift */; };
 		5DD67C5126EA3E750076F459 /* DeleteListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD67C5026EA3E750076F459 /* DeleteListRouter.swift */; };
 		5DD67C5326EA452A0076F459 /* DeleteListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD67C5226EA452A0076F459 /* DeleteListTableViewCell.swift */; };
+		5DD67C5526EB4BCB0076F459 /* PopUp2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD67C5426EB4BCB0076F459 /* PopUp2ViewController.swift */; };
 		ECF37E30112F154CF69BED78 /* Pods_PatternChupova.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F51AB4B87224ABD712153C30 /* Pods_PatternChupova.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		5DD67C4C26EA3E020076F459 /* DeleteListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteListInteractor.swift; sourceTree = "<group>"; };
 		5DD67C5026EA3E750076F459 /* DeleteListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteListRouter.swift; sourceTree = "<group>"; };
 		5DD67C5226EA452A0076F459 /* DeleteListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteListTableViewCell.swift; sourceTree = "<group>"; };
+		5DD67C5426EB4BCB0076F459 /* PopUp2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUp2ViewController.swift; sourceTree = "<group>"; };
 		C034EA4F68CF33A15D879BB1 /* Pods-PatternChupova.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PatternChupova.release.xcconfig"; path = "Target Support Files/Pods-PatternChupova/Pods-PatternChupova.release.xcconfig"; sourceTree = "<group>"; };
 		F51AB4B87224ABD712153C30 /* Pods_PatternChupova.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PatternChupova.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F85E2F50EC04CE1F64884674 /* Pods-PatternChupova.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PatternChupova.debug.xcconfig"; path = "Target Support Files/Pods-PatternChupova/Pods-PatternChupova.debug.xcconfig"; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				5DD67C4A26EA3D780076F459 /* DeleteListPresenter.swift */,
 				5DD67C4C26EA3E020076F459 /* DeleteListInteractor.swift */,
 				5DD67C5026EA3E750076F459 /* DeleteListRouter.swift */,
+				5DD67C5426EB4BCB0076F459 /* PopUp2ViewController.swift */,
 			);
 			path = VIPER;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				5DD67C4B26EA3D780076F459 /* DeleteListPresenter.swift in Sources */,
 				5D9BC2C326D8D15500F15E52 /* SceneDelegate.swift in Sources */,
 				5DCEEF2A26DF670F0065B2CA /* PopUpViewController.swift in Sources */,
+				5DD67C5526EB4BCB0076F459 /* PopUp2ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

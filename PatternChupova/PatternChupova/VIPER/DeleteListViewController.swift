@@ -34,7 +34,7 @@ extension DeleteListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! DeleteListTableViewCell
-        presenter.id=cell.id
+        presenter.goRouter(id: cell.id)
     }
     
 }

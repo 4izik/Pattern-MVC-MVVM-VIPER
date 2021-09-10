@@ -4,8 +4,8 @@ import Foundation
 protocol DeleteListPresenterInput{
     var outputPresenter: DeleteListPresenterOutput! {get set}
     var taskDelete:[TaskModel] {get set}
-    var id:String {get set}
     func takeInteractor()
+    func goRouter(id:String)
     
 }
 
@@ -14,7 +14,7 @@ protocol DeleteListPresenterOutput {
 }
 
 class DeleteListPresenter:DeleteListPresenterInput {
-    var id=""
+   
     var taskDelete:[TaskModel]=[]
     var outputPresenter: DeleteListPresenterOutput!
     var interactor : DeleteListInteractorInput! = DeleteListInteractor()
@@ -22,7 +22,10 @@ class DeleteListPresenter:DeleteListPresenterInput {
     
     func takeInteractor() {
         taskDelete=interactor.takeDeleteTask()
-        print(taskDelete.count)
+    }
+    func goRouter(id: String) {
+        router.showPopUp2()
+        
     }
 }
 
