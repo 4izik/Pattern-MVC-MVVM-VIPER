@@ -21,7 +21,6 @@ class DeleteListPresenter:DeleteListPresenterInput {
             switch doWithTask {
             case "restore":
                 interactor.reWrite(id: idTask, newStatus: "active")
-                
             case "end":
                 interactor.reWrite(id: idTask, newStatus: "end")
             case "delete":
